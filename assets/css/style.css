@@ -1,0 +1,31 @@
+@keyframes heroFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-animate {
+    animation: heroFadeIn 1.2s ease-out forwards;
+}
+
+/* List view mode cho Trang Sản Phẩm */
+#product-list.list-view {
+    display: flex;
+    flex-direction: column;
+}
+#product-list.list-view .product-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+}
+#product-list.list-view .product-card img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+}

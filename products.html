@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sản phẩm - GDU TechStore</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link rel="stylesheet" href="assets/css/style.css" />
+    </head>
+    <body class="bg-gray-50 text-gray-800">
+        <div id="site-header"></div>
+
+        <main
+            class="container mx-auto py-8 px-4 flex flex-col md:flex-row gap-6"
+        >
+            <aside class="w-full md:w-1/4 bg-white p-4 rounded shadow-md h-fit">
+                <h3 class="font-bold text-lg mb-4">Bộ Lọc</h3>
+                <div class="mb-4">
+                    <label class="block font-semibold mb-2">Tìm kiếm</label>
+                    <input
+                        type="text"
+                        id="search-input"
+                        placeholder="Tên sản phẩm..."
+                        class="w-full border rounded px-3 py-2 outline-none focus:border-blue-500"
+                    />
+                </div>
+                <div class="mb-4">
+                    <label class="block font-semibold mb-2">Danh mục</label>
+                    <select
+                        id="category-filter"
+                        class="w-full border rounded px-3 py-2"
+                    >
+                        <option value="All">Tất cả</option>
+                        <option value="Laptop">Laptop</option>
+                        <option value="Phone">Điện thoại</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label class="block font-semibold mb-2">Khoảng giá</label>
+                    <select
+                        id="price-filter"
+                        class="w-full border rounded px-3 py-2"
+                    >
+                        <option value="All">Mọi mức giá</option>
+                        <option value="0-25000000">Dưới 25 triệu</option>
+                        <option value="25000000-50000000">25 - 50 triệu</option>
+                        <option value="50000000-999999999">
+                            Trên 50 triệu
+                        </option>
+                    </select>
+                </div>
+            </aside>
+
+            <section class="w-full md:w-3/4">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-2xl font-bold">Danh sách sản phẩm</h2>
+                    <div class="space-x-2">
+                        <button
+                            id="grid-view-btn"
+                            class="bg-gray-200 px-3 py-1 rounded"
+                        >
+                            <i class="fas fa-th"></i>
+                        </button>
+                        <button
+                            id="list-view-btn"
+                            class="bg-gray-200 px-3 py-1 rounded"
+                        >
+                            <i class="fas fa-list"></i>
+                        </button>
+                    </div>
+                </div>
+                <div
+                    id="product-list"
+                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+                ></div>
+            </section>
+        </main>
+
+        <div id="site-footer"></div>
+        <script src="assets/js/layout.js"></script>
+        <script src="assets/js/app.js"></script>
+    </body>
+</html>

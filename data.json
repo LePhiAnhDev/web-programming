@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "name": "Laptop Dell XPS 15",
+        "price": 40000000,
+        "category": "Laptop",
+        "image": "assets/images/image-001.jpg",
+        "description": "Laptop doanh nhân cao cấp, mỏng nhẹ."
+    },
+    {
+        "id": 2,
+        "name": "MacBook Pro M3",
+        "price": 55000000,
+        "category": "Laptop",
+        "image": "assets/images/image-002.jpg",
+        "description": "Hiệu năng cực đỉnh với chip M3 mới nhất."
+    },
+    {
+        "id": 3,
+        "name": "iPhone 15 Pro Max",
+        "price": 30000000,
+        "category": "Phone",
+        "image": "assets/images/image-003.jpg",
+        "description": "Điện thoại flagship của Apple."
+    },
+    {
+        "id": 4,
+        "name": "Samsung Galaxy S24 Ultra",
+        "price": 32000000,
+        "category": "Phone",
+        "image": "assets/images/image-004.jpg",
+        "description": "Tích hợp AI thông minh, camera 200MP."
+    },
+    {
+        "id": 5,
+        "name": "Laptop Asus ROG Strix",
+        "price": 35000000,
+        "category": "Laptop",
+        "image": "assets/images/image-005.jpg",
+        "description": "Laptop gaming tản nhiệt cực tốt."
+    },
+    {
+        "id": 6,
+        "name": "Xiaomi 14 Pro",
+        "price": 22000000,
+        "category": "Phone",
+        "image": "assets/images/image-006.jpg",
+        "description": "Cấu hình mạnh mẽ, sạc siêu nhanh."
+    },
+    {
+        "id": 7,
+        "name": "Laptop Lenovo ThinkPad",
+        "price": 28000000,
+        "category": "Laptop",
+        "image": "assets/images/image-007.jpg",
+        "description": "Bàn phím gõ tốt nhất thế giới."
+    },
+    {
+        "id": 8,
+        "name": "Oppo Find X7",
+        "price": 25000000,
+        "category": "Phone",
+        "image": "assets/images/image-008.jpg",
+        "description": "Thiết kế sang trọng, camera Hasselblad."
+    }
+]
