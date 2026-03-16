@@ -39,7 +39,7 @@ async function fetchData() {
     }
 }
 
-// --- Router cơ bản ---
+// --- Router ---
 function routePage() {
     if (document.getElementById("latest-products"))
         renderProducts(productsData.slice(0, 8), "latest-products");
@@ -140,7 +140,7 @@ function renderDetail() {
     if (product) {
         container.innerHTML = `
             <div class="w-full md:w-1/2">
-                <img src="${product.image}" alt="${product.name}" class="w-full rounded object-cover">
+                <img src="${product.image}" alt="${product.name}" class="w-full rounded">
             </div>
             <div class="w-full md:w-1/2 flex flex-col justify-center">
                 <h1 class="text-3xl font-bold mb-4">${product.name}</h1>

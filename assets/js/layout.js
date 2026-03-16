@@ -46,7 +46,7 @@ function createHeaderMarkup() {
                     </button>
                 </div>
             </div>
-            <nav id="mobile-menu" class="hidden bg-white border-t p-4 flex-col space-y-2 md:hidden">
+            <nav id="mobile-menu" class="hidden bg-white border-t p-4 space-y-2 md:hidden">
                 <a href="index.html" class="block ${getNavLinkClass("index.html")}">Trang chủ</a>
                 <a href="products.html" class="block ${getNavLinkClass("products.html")}">Sản phẩm</a>
                 <a href="contact.html" class="block ${getNavLinkClass("contact.html")}">Liên hệ</a>
