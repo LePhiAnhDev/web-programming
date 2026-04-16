@@ -1,0 +1,401 @@
+' ================================================================
+' GDU TechStore - Wireframe cac trang (PlantUML Salt)
+' Mo ta bo cuc thuc te cua tung trang trong du an
+' ================================================================
+
+
+' ================================================================
+' 1. index.html - TRANG CHU (Home Page)
+' Bo cuc: Hero banner > Features strip > Product grid > CTA banner
+' ================================================================
+@startsalt
+{+
+  ' === HEADER (shared) ===
+  {#
+    <&home> GDU TechStore | Trang chu | San pham | Lien he | "  Tim kiem...         " | <&cart> 0
+  }
+  ==
+  ' === HERO BANNER ===
+  {+
+    .
+    SIEU KHUYEN MAI MUA HE 2026
+    .
+    **CONG NGHE DINH CAO**
+    **GIA CUC TOT**
+    .
+    Giam gia den 50% cho Laptop va Dien thoai
+    Bao hanh chinh hang toan quoc
+    .
+    {#
+      [  Mua ngay  ] | [  Tu van  ]
+    }
+    .
+  }
+  --
+  ' === FEATURES STRIP (4 cot) ===
+  {#
+    <&shield> Hang chinh hang | Giao hang nhanh | Doi tra 30 ngay | Ho tro 24/7
+    100% dam bao | Noi thanh 2 gio | Mien phi | Hotline mien phi
+  }
+  ==
+  ' === SAN PHAM MOI NHAT (grid 4 cot x 2 hang = 8 SP) ===
+  **San Pham Moi Nhat**
+  {#
+    {+
+      <&image> Hinh SP
+      Laptop
+      Dell XPS 15
+      40.000.000d
+      [Them vao gio]
+    } | {+
+      <&image> Hinh SP
+      Laptop
+      MacBook Pro M3
+      55.000.000d
+      [Them vao gio]
+    } | {+
+      <&image> Hinh SP
+      Phone
+      iPhone 15 Pro Max
+      30.000.000d
+      [Them vao gio]
+    } | {+
+      <&image> Hinh SP
+      Phone
+      Galaxy S24 Ultra
+      32.000.000d
+      [Them vao gio]
+    }
+    {+
+      <&image> Hinh SP
+      Laptop
+      Asus ROG Strix
+      35.000.000d
+      [Them vao gio]
+    } | {+
+      <&image> Hinh SP
+      Phone
+      Xiaomi 14 Pro
+      22.000.000d
+      [Them vao gio]
+    } | {+
+      <&image> Hinh SP
+      Laptop
+      Lenovo ThinkPad
+      28.000.000d
+      [Them vao gio]
+    } | {+
+      <&image> Hinh SP
+      Phone
+      Oppo Find X7
+      25.000.000d
+      [Them vao gio]
+    }
+  }
+  ==
+  ' === CTA BANNER ===
+  {+
+    **Khong tim duoc san pham phu hop?**
+    Doi ngu tu van san sang ho tro ban 24/7
+    [ Lien he ngay ]
+  }
+  ==
+  ' === FOOTER (shared - 3 cot) ===
+  {#
+    **GDU TechStore** | **Thong tin lien he** | **Ban do cua hang**
+    Cung cap thiet bi cong nghe | <&map-marker> 123 NVB, Go Vap | {+ Google Maps }
+    chinh hang, bao hanh uy tin | <&phone> 0123.456.789 | .
+    [FB] [YT] [TT] [Zalo] | <&envelope-closed> support@gdu... | .
+    . | <&clock> T2-CN 8:00-21:00 | .
+  }
+  --
+  (c) 2026 GDU TechStore
+}
+@endsalt
+
+
+' ================================================================
+' 2. products.html - SAN PHAM (Products Page)
+' Bo cuc: Breadcrumb + Title > Sidebar filter | Product grid
+' ================================================================
+@startsalt
+{+
+  ' === HEADER ===
+  {#
+    <&home> GDU TechStore | Trang chu | San pham | Lien he | "  Tim kiem...         " | <&cart> 0
+  }
+  --
+  ' === BREADCRUMB + PAGE TITLE ===
+  Trang chu > **San pham**
+  **Tat ca san pham**
+  ==
+  ' === MAIN: Sidebar (trai) | Product Grid (phai) ===
+  {#
+    {+
+      **Bo loc**
+      --
+      TIM KIEM
+      "Ten san pham...         "
+      ..
+      DANH MUC
+      ^Tat ca danh muc^Laptop^Dien thoai^
+      ..
+      KHOANG GIA
+      ^Moi muc gia^Duoi 25 trieu^25-50 trieu^Tren 50 trieu^
+      ..
+      [ Xoa bo loc ]
+    } | {
+      {#
+        Hien thi: **N san pham** | . | [<&grid-three-up>] [<&list>]
+      }
+      {#
+        {+
+          <&image> Hinh SP
+          Laptop
+          Dell XPS 15
+          40.000.000d
+          [Them vao gio]
+        } | {+
+          <&image> Hinh SP
+          Laptop
+          MacBook Pro M3
+          55.000.000d
+          [Them vao gio]
+        } | {+
+          <&image> Hinh SP
+          Phone
+          iPhone 15 Pro Max
+          30.000.000d
+          [Them vao gio]
+        }
+        {+
+          <&image> Hinh SP
+          Phone
+          Galaxy S24 Ultra
+          32.000.000d
+          [Them vao gio]
+        } | {+
+          <&image> Hinh SP
+          Laptop
+          Asus ROG Strix
+          35.000.000d
+          [Them vao gio]
+        } | {+
+          <&image> Hinh SP
+          Phone
+          Xiaomi 14 Pro
+          22.000.000d
+          [Them vao gio]
+        }
+      }
+    }
+  }
+  ==
+  ' === FOOTER ===
+  {#
+    **GDU TechStore** | **Thong tin lien he** | **Ban do cua hang**
+    Cung cap thiet bi cong nghe | <&map-marker> 123 NVB, Go Vap | {+ Google Maps }
+    chinh hang, bao hanh uy tin | <&phone> 0123.456.789 | .
+    [FB] [YT] [TT] [Zalo] | <&envelope-closed> support@gdu... | .
+    . | <&clock> T2-CN 8:00-21:00 | .
+  }
+  --
+  (c) 2026 GDU TechStore
+}
+@endsalt
+
+
+' ================================================================
+' 3. detail.html - CHI TIET SAN PHAM (Product Detail Page)
+' Bo cuc: Breadcrumb > Image (trai) | Info (phai) > Back link
+' ================================================================
+@startsalt
+{+
+  ' === HEADER ===
+  {#
+    <&home> GDU TechStore | Trang chu | San pham | Lien he | "  Tim kiem...         " | <&cart> 0
+  }
+  ==
+  ' === BREADCRUMB ===
+  Trang chu > San pham > **Ten san pham**
+  ' === PRODUCT DETAIL CARD ===
+  {+
+    {#
+      {+
+        .
+        .
+        .
+        <&image> HINH ANH SAN PHAM
+        (360px height)
+        .
+        .
+        .
+      } | {
+        {+
+          Laptop
+        }
+        .
+        **TEN SAN PHAM**
+        .
+        **40.000.000 VND** (gia)
+        .
+        Mo ta chi tiet ve san pham
+        nay se hien thi o day...
+        --
+        {#
+          So luong: | [ - ] | "1" | [ + ]
+        }
+        .
+        {#
+          [ Them vao gio hang ] | [ Tiep tuc mua ]
+        }
+      }
+    }
+  }
+  .
+  <&arrow-left> Quay lai danh sach san pham
+  ==
+  ' === FOOTER ===
+  {#
+    **GDU TechStore** | **Thong tin lien he** | **Ban do cua hang**
+    Cung cap thiet bi cong nghe | <&map-marker> 123 NVB, Go Vap | {+ Google Maps }
+    chinh hang, bao hanh uy tin | <&phone> 0123.456.789 | .
+    [FB] [YT] [TT] [Zalo] | <&envelope-closed> support@gdu... | .
+    . | <&clock> T2-CN 8:00-21:00 | .
+  }
+  --
+  (c) 2026 GDU TechStore
+}
+@endsalt
+
+
+' ================================================================
+' 4. cart.html - GIO HANG (Shopping Cart Page)
+' Bo cuc: Breadcrumb + Title > Cart table (2/3) | Summary (1/3)
+' ================================================================
+@startsalt
+{+
+  ' === HEADER ===
+  {#
+    <&home> GDU TechStore | Trang chu | San pham | Lien he | "  Tim kiem...         " | <&cart> 0
+  }
+  --
+  ' === BREADCRUMB + PAGE TITLE ===
+  Trang chu > **Gio hang**
+  **Gio hang cua ban**
+  ==
+  ' === MAIN: Cart Table (trai 2/3) | Summary (phai 1/3) ===
+  {#
+    {
+      ' --- Bang san pham trong gio ---
+      {#
+        **San pham** | **Don gia** | **So luong** | **Thanh tien** | .
+        <&image> SP1 - Dell XPS 15 | 40.000.000d | "1  " | 40.000.000d | [<&trash>]
+        <&image> SP2 - iPhone 15 Pro | 30.000.000d | "2  " | 60.000.000d | [<&trash>]
+      }
+      .
+      [<&arrow-left> Tiep tuc mua sam]
+    } | {+
+      ' --- Tong don hang ---
+      **Tong don hang**
+      --
+      {#
+        Tam tinh | 100.000.000d
+        Van chuyen | Mien phi
+      }
+      ==
+      {#
+        **Tong cong** | **100.000.000d**
+      }
+      .
+      [<&lock-locked> Thanh toan ngay]
+      --
+      <&shield> Thanh toan bao mat
+      <&loop-circular> Doi tra 30 ngay
+    }
+  }
+  ==
+  ' === FOOTER ===
+  {#
+    **GDU TechStore** | **Thong tin lien he** | **Ban do cua hang**
+    Cung cap thiet bi cong nghe | <&map-marker> 123 NVB, Go Vap | {+ Google Maps }
+    chinh hang, bao hanh uy tin | <&phone> 0123.456.789 | .
+    [FB] [YT] [TT] [Zalo] | <&envelope-closed> support@gdu... | .
+    . | <&clock> T2-CN 8:00-21:00 | .
+  }
+  --
+  (c) 2026 GDU TechStore
+}
+@endsalt
+
+
+' ================================================================
+' 5. contact.html - LIEN HE (Contact Page)
+' Bo cuc: Breadcrumb + Title > Form (3/5) | Info card (2/5)
+' ================================================================
+@startsalt
+{+
+  ' === HEADER ===
+  {#
+    <&home> GDU TechStore | Trang chu | San pham | Lien he | "  Tim kiem...         " | <&cart> 0
+  }
+  --
+  ' === BREADCRUMB + PAGE TITLE ===
+  Trang chu > **Lien he**
+  **Lien he voi chung toi**
+  ==
+  ' === MAIN: Contact Form (trai 3/5) | Info (phai 2/5) ===
+  {#
+    {+
+      ' --- Form gui tin nhan ---
+      **Gui tin nhan**
+      Chung toi se phan hoi trong 24 gio
+      --
+      HO VA TEN *
+      "Nguyen Van A                          "
+      {#
+        {
+          EMAIL *
+          "email@example.com    "
+        } | {
+          SO DIEN THOAI *
+          "0123456789        "
+        }
+      }
+      NOI DUNG *
+      "Ban can ho tro gi?...                  "
+      .
+      [ Gui lien he ]
+    } | {+
+      ' --- Thong tin lien he ---
+      **Thong tin lien he**
+      --
+      <&map-marker> Dia chi
+      123 NVB, P.4, Go Vap, TP.HCM
+      ..
+      <&phone> Hotline
+      0123.456.789
+      ..
+      <&envelope-closed> Email
+      support@gdutechstore.vn
+      ..
+      <&clock> Gio lam viec
+      T2 - CN: 8:00 - 21:00
+      --
+      Theo doi chung toi
+      [FB] [YT] [TT]
+    }
+  }
+  ==
+  ' === FOOTER ===
+  {#
+    **GDU TechStore** | **Thong tin lien he** | **Ban do cua hang**
+    Cung cap thiet bi cong nghe | <&map-marker> 123 NVB, Go Vap | {+ Google Maps }
+    chinh hang, bao hanh uy tin | <&phone> 0123.456.789 | .
+    [FB] [YT] [TT] [Zalo] | <&envelope-closed> support@gdu... | .
+    . | <&clock> T2-CN 8:00-21:00 | .
+  }
+  --
+  (c) 2026 GDU TechStore
+}
+@endsalt
