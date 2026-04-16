@@ -1,87 +1,205 @@
 <!doctype html>
 <html lang="vi">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Sản phẩm - GDU TechStore</title>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        />
-        <link rel="stylesheet" href="assets/css/style.css" />
-    </head>
-    <body class="bg-gray-50">
-        <div id="site-header"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sản phẩm — GDU TechStore</title>
+    <meta
+      name="description"
+      content="Mua laptop, điện thoại chính hãng tại GDU TechStore."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body class="bg-gray-50 min-h-screen flex flex-col">
+    <div id="site-header"></div>
 
-        <main
-            class="container mx-auto py-8 px-4 flex flex-col md:flex-row gap-6"
+    <!-- Page Header -->
+    <div
+      style="
+        background: #fff;
+        border-bottom: 1px solid var(--border);
+        padding: 20px 0;
+      "
+    >
+      <div class="container mx-auto px-4">
+        <nav class="breadcrumb">
+          <a href="index.html">Trang chủ</a>
+          <i class="fas fa-chevron-right"></i>
+          <span style="color: var(--text-primary); font-weight: 600"
+            >Sản phẩm</span
+          >
+        </nav>
+        <h1
+          style="
+            font-family: &quot;Be Vietnam Pro&quot;, sans-serif;
+            font-size: 1.6rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            color: var(--text-primary);
+          "
         >
-            <aside class="w-full md:w-1/4 bg-white p-4 rounded shadow-md h-fit">
-                <h3 class="font-bold text-lg mb-4">Bộ Lọc</h3>
-                <div class="mb-4">
-                    <label class="block font-semibold mb-2">Tìm kiếm</label>
-                    <input
-                        type="text"
-                        id="search-input"
-                        placeholder="Tên sản phẩm..."
-                        class="w-full border rounded px-3 py-2 outline-none focus:border-blue-500"
-                    />
-                </div>
-                <div class="mb-4">
-                    <label class="block font-semibold mb-2">Danh mục</label>
-                    <select
-                        id="category-filter"
-                        class="w-full border rounded px-3 py-2"
-                    >
-                        <option value="All">Tất cả</option>
-                        <option value="Laptop">Laptop</option>
-                        <option value="Phone">Điện thoại</option>
-                    </select>
-                </div>
-                <div class="mb-4">
-                    <label class="block font-semibold mb-2">Khoảng giá</label>
-                    <select
-                        id="price-filter"
-                        class="w-full border rounded px-3 py-2"
-                    >
-                        <option value="All">Mọi mức giá</option>
-                        <option value="0-25000000">Dưới 25 triệu</option>
-                        <option value="25000000-50000000">25 - 50 triệu</option>
-                        <option value="50000000-999999999">
-                            Trên 50 triệu
-                        </option>
-                    </select>
-                </div>
-            </aside>
+          Tất cả sản phẩm
+        </h1>
+      </div>
+    </div>
 
-            <section class="w-full md:w-3/4">
-                <div class="flex justify-between items-center mb-4">
-                    <h2 class="text-2xl font-bold">Danh sách sản phẩm</h2>
-                    <div class="space-x-2">
-                        <button
-                            id="grid-view-btn"
-                            class="bg-gray-200 px-3 py-1 rounded"
-                        >
-                            <i class="fas fa-th"></i>
-                        </button>
-                        <button
-                            id="list-view-btn"
-                            class="bg-gray-200 px-3 py-1 rounded"
-                        >
-                            <i class="fas fa-list"></i>
-                        </button>
-                    </div>
-                </div>
-                <div
-                    id="product-list"
-                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-                ></div>
-            </section>
-        </main>
+    <main
+      class="container mx-auto py-8 px-4 flex flex-col md:flex-row gap-6 flex-1"
+    >
+      <!-- Sidebar Filter -->
+      <aside class="w-full md:w-64 flex-shrink-0">
+        <div class="filter-sidebar">
+          <h3 class="filter-title">
+            <i
+              class="fas fa-sliders"
+              style="margin-right: 8px; color: var(--primary)"
+            ></i
+            >Bộ lọc
+          </h3>
 
-        <div id="site-footer"></div>
-        <script src="assets/js/layout.js"></script>
-        <script src="assets/js/app.js"></script>
-    </body>
+          <div class="mb-5">
+            <label>Tìm kiếm</label>
+            <div class="relative">
+              <i
+                class="fas fa-search"
+                style="
+                  position: absolute;
+                  left: 11px;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  color: var(--text-muted);
+                  font-size: 0.8rem;
+                  pointer-events: none;
+                "
+              ></i>
+              <input
+                type="text"
+                id="search-input"
+                placeholder="Tên sản phẩm..."
+                class="filter-input"
+                style="padding-left: 32px"
+              />
+            </div>
+          </div>
+
+          <div class="mb-5">
+            <label>Danh mục</label>
+            <select id="category-filter" class="filter-input">
+              <option value="All">Tất cả danh mục</option>
+              <option value="Laptop">
+                <i class="fas fa-laptop"></i> Laptop
+              </option>
+              <option value="Phone">Điện thoại</option>
+            </select>
+          </div>
+
+          <div class="mb-5">
+            <label>Khoảng giá</label>
+            <select id="price-filter" class="filter-input">
+              <option value="All">Mọi mức giá</option>
+              <option value="0-25000000">Dưới 25 triệu</option>
+              <option value="25000000-50000000">25 – 50 triệu</option>
+              <option value="50000000-999999999">Trên 50 triệu</option>
+            </select>
+          </div>
+
+          <button
+            onclick="resetFilters()"
+            style="
+              width: 100%;
+              padding: 9px;
+              border: 1.5px solid var(--border);
+              border-radius: var(--radius-sm);
+              background: var(--bg-page);
+              font-family: &quot;Be Vietnam Pro&quot;, sans-serif;
+              font-size: 0.85rem;
+              font-weight: 600;
+              color: var(--text-secondary);
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 6px;
+              transition: all var(--transition);
+            "
+            onmouseover="
+              this.style.borderColor = 'var(--danger)';
+              this.style.color = 'var(--danger)';
+            "
+            onmouseout="
+              this.style.borderColor = 'var(--border)';
+              this.style.color = 'var(--text-secondary)';
+            "
+          >
+            <i class="fas fa-rotate-left" style="font-size: 0.8rem"></i> Xoá bộ
+            lọc
+          </button>
+        </div>
+      </aside>
+
+      <!-- Product List -->
+      <section class="flex-1 min-w-0">
+        <!-- Toolbar -->
+        <div class="flex items-center justify-between mb-5 flex-wrap gap-3">
+          <p style="font-size: 0.88rem; color: var(--text-muted)">
+            Hiển thị
+            <span
+              id="result-count"
+              style="color: var(--primary); font-weight: 700"
+              >...</span
+            >
+          </p>
+          <div class="flex items-center gap-2">
+            <span
+              style="
+                font-size: 0.8rem;
+                color: var(--text-muted);
+                margin-right: 4px;
+              "
+              >Xem:</span
+            >
+            <button
+              id="grid-view-btn"
+              class="view-toggle-btn"
+              title="Dạng lưới"
+            >
+              <i class="fas fa-th-large"></i>
+            </button>
+            <button
+              id="list-view-btn"
+              class="view-toggle-btn"
+              title="Dạng danh sách"
+            >
+              <i class="fas fa-list"></i>
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="product-list"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        ></div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+    <script src="assets/js/layout.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script>
+      function resetFilters() {
+        const s = document.getElementById("search-input");
+        const c = document.getElementById("category-filter");
+        const p = document.getElementById("price-filter");
+        if (s) s.value = "";
+        if (c) c.value = "All";
+        if (p) p.value = "All";
+        s?.dispatchEvent(new Event("input"));
+      }
+    </script>
+  </body>
 </html>

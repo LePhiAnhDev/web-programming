@@ -1,80 +1,269 @@
 <!doctype html>
 <html lang="vi">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Liên hệ</title>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        />
-        <link rel="stylesheet" href="assets/css/style.css" />
-    </head>
-    <body class="bg-gray-50">
-        <div id="site-header"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liên hệ — GDU TechStore</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body class="bg-gray-50 min-h-screen flex flex-col">
+    <div id="site-header"></div>
 
-        <main class="container mx-auto py-12 px-4 flex justify-center">
-            <div class="bg-white p-8 rounded shadow-md w-full max-w-lg">
-                <h2 class="text-2xl font-bold text-center mb-6">
-                    Liên Hệ Với Chúng Tôi
-                </h2>
-                <form id="contact-form">
-                    <div class="mb-4">
-                        <label class="block mb-1">Họ và tên *</label>
-                        <input
-                            type="text"
-                            id="name"
-                            class="w-full border p-2 rounded outline-none focus:border-blue-500"
-                        />
-                        <small id="name-err" class="text-red-500 hidden"
-                            >Vui lòng nhập họ tên.</small
-                        >
-                    </div>
-                    <div class="mb-4">
-                        <label class="block mb-1">Email *</label>
-                        <input
-                            type="text"
-                            id="email"
-                            class="w-full border p-2 rounded outline-none focus:border-blue-500"
-                        />
-                        <small id="email-err" class="text-red-500 hidden"
-                            >Email không hợp lệ.</small
-                        >
-                    </div>
-                    <div class="mb-4">
-                        <label class="block mb-1">Số điện thoại *</label>
-                        <input
-                            type="text"
-                            id="phone"
-                            class="w-full border p-2 rounded outline-none focus:border-blue-500"
-                        />
-                        <small id="phone-err" class="text-red-500 hidden"
-                            >Số điện thoại phải là số và không để trống.</small
-                        >
-                    </div>
-                    <div class="mb-4">
-                        <label class="block mb-1">Nội dung *</label>
-                        <textarea
-                            id="message"
-                            rows="4"
-                            class="w-full border p-2 rounded outline-none focus:border-blue-500"
-                        ></textarea>
-                        <small id="message-err" class="text-red-500 hidden"
-                            >Vui lòng nhập nội dung.</small
-                        >
-                    </div>
-                    <button
-                        type="submit"
-                        class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 font-bold"
-                    >
-                        Gửi Liên Hệ
-                    </button>
-                </form>
+    <!-- Page Header -->
+    <div
+      style="
+        background: #fff;
+        border-bottom: 1px solid var(--border);
+        padding: 20px 0;
+      "
+    >
+      <div class="container mx-auto px-4">
+        <nav class="breadcrumb">
+          <a href="index.html">Trang chủ</a>
+          <i class="fas fa-chevron-right"></i>
+          <span style="color: var(--text-primary); font-weight: 600"
+            >Liên hệ</span
+          >
+        </nav>
+        <h1
+          style="
+            font-family: &quot;Be Vietnam Pro&quot;, sans-serif;
+            font-size: 1.6rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            color: var(--text-primary);
+          "
+        >
+          Liên hệ với chúng tôi
+        </h1>
+      </div>
+    </div>
+
+    <main class="container mx-auto py-12 px-4 flex-1">
+      <div class="flex flex-col lg:flex-row gap-10 max-w-5xl mx-auto">
+        <!-- Contact Form -->
+        <div class="w-full lg:w-3/5">
+          <div class="contact-card">
+            <h2>Gửi tin nhắn</h2>
+            <p class="subtitle">
+              Chúng tôi sẽ phản hồi trong vòng 24 giờ làm việc.
+            </p>
+
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label class="form-label" for="name">
+                  <i class="fas fa-user" style="margin-right: 5px"></i>Họ và tên
+                  *
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  class="form-input"
+                  placeholder="Nguyễn Văn A"
+                  autocomplete="name"
+                />
+                <p id="name-err" class="form-error hidden">
+                  <i
+                    class="fas fa-circle-exclamation"
+                    style="font-size: 0.75rem"
+                  ></i>
+                  Vui lòng nhập họ và tên.
+                </p>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="form-group">
+                  <label class="form-label" for="email">
+                    <i class="fas fa-envelope" style="margin-right: 5px"></i
+                    >Email *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    class="form-input"
+                    placeholder="email@example.com"
+                    autocomplete="email"
+                  />
+                  <p id="email-err" class="form-error hidden">
+                    <i
+                      class="fas fa-circle-exclamation"
+                      style="font-size: 0.75rem"
+                    ></i>
+                    Email không hợp lệ.
+                  </p>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="phone">
+                    <i class="fas fa-phone" style="margin-right: 5px"></i>Số
+                    điện thoại *
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    class="form-input"
+                    placeholder="0123456789"
+                    autocomplete="tel"
+                  />
+                  <p id="phone-err" class="form-error hidden">
+                    <i
+                      class="fas fa-circle-exclamation"
+                      style="font-size: 0.75rem"
+                    ></i>
+                    Số điện thoại phải từ 9–11 chữ số.
+                  </p>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="message">
+                  <i class="fas fa-comment-dots" style="margin-right: 5px"></i
+                  >Nội dung *
+                </label>
+                <textarea
+                  id="message"
+                  rows="5"
+                  class="form-input"
+                  placeholder="Bạn cần hỗ trợ gì?..."
+                  style="resize: vertical"
+                ></textarea>
+                <p id="message-err" class="form-error hidden">
+                  <i
+                    class="fas fa-circle-exclamation"
+                    style="font-size: 0.75rem"
+                  ></i>
+                  Vui lòng nhập nội dung.
+                </p>
+              </div>
+
+              <button type="submit" class="btn-submit">
+                <i class="fas fa-paper-plane"></i> Gửi liên hệ
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="w-full lg:w-2/5">
+          <div
+            style="
+              background: var(--bg-card);
+              border: 1px solid var(--border);
+              border-radius: var(--radius-lg);
+              padding: 32px;
+              box-shadow: var(--shadow-sm);
+              height: 100%;
+            "
+          >
+            <h3
+              style="
+                font-family: &quot;Be Vietnam Pro&quot;, sans-serif;
+                font-size: 1.1rem;
+                font-weight: 700;
+                margin-bottom: 20px;
+                padding-bottom: 14px;
+                border-bottom: 1px solid var(--border);
+              "
+            >
+              Thông tin liên hệ
+            </h3>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <p class="contact-info-label">Địa chỉ</p>
+                <p class="contact-info-value">
+                  123 Nguyễn Văn Bảo, P.4, Gò Vấp, TP.HCM
+                </p>
+              </div>
             </div>
-        </main>
-        <div id="site-footer"></div>
-        <script src="assets/js/layout.js"></script>
-        <script src="assets/js/app.js"></script>
-    </body>
+            <div class="contact-info-item">
+              <div class="contact-info-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <p class="contact-info-label">Hotline</p>
+                <p class="contact-info-value">0123.456.789</p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <p class="contact-info-label">Email</p>
+                <p class="contact-info-value">support@gdutechstore.vn</p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon"><i class="fas fa-clock"></i></div>
+              <div>
+                <p class="contact-info-label">Giờ làm việc</p>
+                <p class="contact-info-value">Thứ 2 – Chủ nhật: 8:00 – 21:00</p>
+              </div>
+            </div>
+
+            <!-- Social -->
+            <div
+              style="
+                margin-top: 20px;
+                padding-top: 16px;
+                border-top: 1px solid var(--border);
+              "
+            >
+              <p
+                style="
+                  font-size: 0.8rem;
+                  font-weight: 600;
+                  color: var(--text-muted);
+                  text-transform: uppercase;
+                  letter-spacing: 0.06em;
+                  margin-bottom: 12px;
+                "
+              >
+                Theo dõi chúng tôi
+              </p>
+              <div style="display: flex; gap: 10px">
+                <a
+                  href="#"
+                  class="social-link"
+                  style="
+                    background: var(--primary-light);
+                    color: var(--primary) !important;
+                  "
+                  aria-label="Facebook"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a
+                  href="#"
+                  class="social-link"
+                  style="background: #fef2f2; color: #ef4444 !important"
+                  aria-label="YouTube"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+                <a
+                  href="#"
+                  class="social-link"
+                  style="
+                    background: #f8fafc;
+                    color: var(--text-primary) !important;
+                  "
+                  aria-label="TikTok"
+                  ><i class="fab fa-tiktok"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="site-footer"></div>
+    <script src="assets/js/layout.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
 </html>

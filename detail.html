@@ -1,28 +1,46 @@
 <!doctype html>
 <html lang="vi">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Chi tiết sản phẩm</title>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        />
-        <link rel="stylesheet" href="assets/css/style.css" />
-    </head>
-    <body class="bg-gray-50">
-        <div id="site-header"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi tiết sản phẩm — GDU TechStore</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body class="bg-gray-50 min-h-screen flex flex-col">
+    <div id="site-header"></div>
 
-        <main class="container mx-auto py-12 px-4">
-            <div
-                id="product-detail"
-                class="bg-white p-6 rounded shadow-md flex flex-col md:flex-row gap-8"
-            ></div>
-        </main>
+    <main class="container mx-auto py-10 px-4 flex-1">
+      <div id="product-detail"></div>
 
-        <div id="site-footer"></div>
-        <script src="assets/js/layout.js"></script>
-        <script src="assets/js/app.js"></script>
-    </body>
+      <!-- Related / Back -->
+      <div class="mt-10 text-center">
+        <a
+          href="products.html"
+          style="
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+          "
+          onmouseover="this.style.textDecoration = 'underline'"
+          onmouseout="this.style.textDecoration = 'none'"
+        >
+          <i class="fas fa-arrow-left" style="font-size: 0.8rem"></i> Quay lại
+          danh sách sản phẩm
+        </a>
+      </div>
+    </main>
+
+    <div id="site-footer"></div>
+    <script src="assets/js/layout.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
 </html>

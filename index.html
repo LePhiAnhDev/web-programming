@@ -1,49 +1,319 @@
 <!doctype html>
 <html lang="vi">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Trang chủ - GDU TechStore</title>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        />
-        <link rel="stylesheet" href="assets/css/style.css" />
-    </head>
-    <body class="bg-gray-50">
-        <div id="site-header"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang chủ — GDU TechStore</title>
+    <meta
+      name="description"
+      content="GDU TechStore – Mua laptop, điện thoại chính hãng, giá tốt nhất TP.HCM."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body class="bg-gray-50 min-h-screen flex flex-col">
+    <div id="site-header"></div>
 
-        <main>
-            <section class="bg-blue-600 text-white py-20 px-4 text-center">
-                <div class="container mx-auto hero-animate">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-4">
-                        Siêu Khuyến Mãi Mùa Hè!
-                    </h1>
-                    <p class="text-lg md:text-xl mb-8">
-                        Giảm giá lên đến 50% cho Laptop và Điện thoại.
-                    </p>
-                    <a
-                        href="products.html"
-                        class="bg-white text-blue-600 px-6 py-3 rounded-full font-bold hover:bg-gray-100 transition"
-                        >Mua Ngay</a
-                    >
-                </div>
-            </section>
+    <main class="flex-1">
+      <!-- ===== HERO ===== -->
+      <section class="hero-section text-white py-14 md:py-24 px-4 text-center relative">
+        <div class="container mx-auto relative z-10">
+          <div class="hero-animate">
+            <span
+              style="
+                display: inline-block;
+                background: rgba(255, 255, 255, 0.12);
+                border: 1px solid rgba(255, 255, 255, 0.25);
+                color: #bfdbfe;
+                font-size: 0.8rem;
+                font-weight: 600;
+                letter-spacing: 0.08em;
+                padding: 5px 16px;
+                border-radius: 999px;
+                margin-bottom: 20px;
+                text-transform: uppercase;
+              "
+            >
+              <i
+                class="fas fa-bolt"
+                style="margin-right: 6px; color: #fbbf24"
+              ></i
+              >Siêu Khuyến Mãi Mùa Hè 2026
+            </span>
+          </div>
+          <h1
+            class="text-4xl md:text-6xl font-extrabold mb-5 hero-animate-delay"
+            style="letter-spacing: -0.03em; line-height: 1.1"
+          >
+            Công Nghệ Đỉnh Cao<br />
+            <span style="color: #bfdbfe">Giá Cực Tốt</span>
+          </h1>
+          <p
+            class="text-lg md:text-xl mb-10 hero-animate-delay2"
+            style="
+              color: rgba(255, 255, 255, 0.8);
+              max-width: 520px;
+              margin-left: auto;
+              margin-right: auto;
+            "
+          >
+            Giảm giá đến <strong style="color: #fbbf24">50%</strong> cho Laptop
+            và Điện thoại hàng đầu. Bảo hành chính hãng toàn quốc.
+          </p>
+          <div class="flex flex-wrap gap-4 justify-center hero-animate-delay2">
+            <a href="products.html" class="hero-cta">
+              <i class="fas fa-shopping-bag"></i> Mua ngay
+            </a>
+            <a
+              href="contact.html"
+              style="
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                border: 2px solid rgba(255, 255, 255, 0.4);
+                color: #fff;
+                padding: 14px 28px;
+                border-radius: 999px;
+                font-family: &quot;Be Vietnam Pro&quot;, sans-serif;
+                font-weight: 700;
+                font-size: 1rem;
+                transition: all 0.22s;
+                text-decoration: none;
+              "
+              onmouseover="this.style.background = 'rgba(255,255,255,0.15)'"
+              onmouseout="this.style.background = 'transparent'"
+            >
+              <i class="fas fa-headset" style="font-size: 0.9rem"></i> Tư vấn
+            </a>
+          </div>
+        </div>
+      </section>
 
-            <section class="container mx-auto py-12 px-4">
-                <h2 class="text-3xl font-bold text-center mb-8">
-                    Sản Phẩm Mới Nhất
-                </h2>
-                <div
-                    id="latest-products"
-                    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
-                ></div>
-            </section>
-        </main>
+      <!-- ===== FEATURES STRIP ===== -->
+      <section style="background: #fff; border-bottom: 1px solid var(--border)">
+        <div class="container mx-auto px-4 py-5">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="flex items-center gap-3 py-2">
+              <span
+                style="
+                  width: 38px;
+                  height: 38px;
+                  background: var(--primary-light);
+                  border-radius: var(--radius-sm);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  flex-shrink: 0;
+                "
+              >
+                <i
+                  class="fas fa-shield-halved"
+                  style="color: var(--primary); font-size: 0.9rem"
+                ></i>
+              </span>
+              <div>
+                <p
+                  style="
+                    font-weight: 700;
+                    font-size: 0.85rem;
+                    font-family: &quot;Be Vietnam Pro&quot;, sans-serif;
+                  "
+                >
+                  Hàng chính hãng
+                </p>
+                <p style="font-size: 0.75rem; color: var(--text-muted)">
+                  100% đảm bảo
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 py-2">
+              <span
+                style="
+                  width: 38px;
+                  height: 38px;
+                  background: #fff7ed;
+                  border-radius: var(--radius-sm);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  flex-shrink: 0;
+                "
+              >
+                <i
+                  class="fas fa-truck-fast"
+                  style="color: var(--accent); font-size: 0.9rem"
+                ></i>
+              </span>
+              <div>
+                <p
+                  style="
+                    font-weight: 700;
+                    font-size: 0.85rem;
+                    font-family: &quot;Be Vietnam Pro&quot;, sans-serif;
+                  "
+                >
+                  Giao hàng nhanh
+                </p>
+                <p style="font-size: 0.75rem; color: var(--text-muted)">
+                  Nội thành 2 giờ
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 py-2">
+              <span
+                style="
+                  width: 38px;
+                  height: 38px;
+                  background: #f0fdf4;
+                  border-radius: var(--radius-sm);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  flex-shrink: 0;
+                "
+              >
+                <i
+                  class="fas fa-rotate-left"
+                  style="color: #22c55e; font-size: 0.9rem"
+                ></i>
+              </span>
+              <div>
+                <p
+                  style="
+                    font-weight: 700;
+                    font-size: 0.85rem;
+                    font-family: &quot;Be Vietnam Pro&quot;, sans-serif;
+                  "
+                >
+                  Đổi trả 30 ngày
+                </p>
+                <p style="font-size: 0.75rem; color: var(--text-muted)">
+                  Miễn phí
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 py-2">
+              <span
+                style="
+                  width: 38px;
+                  height: 38px;
+                  background: #fefce8;
+                  border-radius: var(--radius-sm);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  flex-shrink: 0;
+                "
+              >
+                <i
+                  class="fas fa-headset"
+                  style="color: #eab308; font-size: 0.9rem"
+                ></i>
+              </span>
+              <div>
+                <p
+                  style="
+                    font-weight: 700;
+                    font-size: 0.85rem;
+                    font-family: &quot;Be Vietnam Pro&quot;, sans-serif;
+                  "
+                >
+                  Hỗ trợ 24/7
+                </p>
+                <p style="font-size: 0.75rem; color: var(--text-muted)">
+                  Hotline miễn phí
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <div id="site-footer"></div>
-        <script src="assets/js/layout.js"></script>
-        <script src="assets/js/app.js"></script>
-    </body>
+      <!-- ===== PRODUCTS ===== -->
+      <section class="container mx-auto py-14 px-4">
+        <div class="flex items-end justify-between mb-10 flex-wrap gap-4">
+          <div>
+            <h2 class="section-heading">Sản Phẩm Mới Nhất</h2>
+            <p
+              style="
+                color: var(--text-muted);
+                font-size: 0.9rem;
+                margin-top: 14px;
+              "
+            >
+              Hàng về mỗi tuần, cập nhật liên tục.
+            </p>
+          </div>
+          <a
+            href="products.html"
+            style="
+              display: inline-flex;
+              align-items: center;
+              gap: 6px;
+              color: var(--primary);
+              font-weight: 600;
+              font-size: 0.9rem;
+              text-decoration: none;
+              white-space: nowrap;
+            "
+            onmouseover="this.style.textDecoration = 'underline'"
+            onmouseout="this.style.textDecoration = 'none'"
+          >
+            Xem tất cả
+            <i class="fas fa-arrow-right" style="font-size: 0.75rem"></i>
+          </a>
+        </div>
+        <div
+          id="latest-products"
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+        ></div>
+      </section>
+
+      <!-- ===== BANNER CTA ===== -->
+      <section
+        class="cta-banner"
+        style="
+          background: linear-gradient(135deg, #1e3a8a, #2563eb);
+          padding: 60px 16px;
+          text-align: center;
+        "
+      >
+        <div class="container mx-auto">
+          <h2
+            class="cta-banner-heading"
+            style="
+              font-family: &quot;Be Vietnam Pro&quot;, sans-serif;
+              font-size: 1.8rem;
+              font-weight: 800;
+              color: #fff;
+              letter-spacing: -0.03em;
+              margin-bottom: 12px;
+            "
+          >
+            Không tìm được sản phẩm phù hợp?
+          </h2>
+          <p
+            style="
+              color: rgba(255, 255, 255, 0.75);
+              margin-bottom: 24px;
+              font-size: 0.95rem;
+            "
+          >
+            Đội ngũ tư vấn của chúng tôi sẵn sàng hỗ trợ bạn 24/7.
+          </p>
+          <a href="contact.html" class="hero-cta">
+            <i class="fas fa-envelope"></i> Liên hệ ngay
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+    <script src="assets/js/layout.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
 </html>
